@@ -2,6 +2,7 @@
   "name": "XML-Fix",
   "description": "Fixes the XML-Codes displaying instead of the characters on notifications.",
   "uuid": "xmlfix@pwall.github.com",
+  "url": "https://github.com/PWall2222/XMLFix",
   "shell-version": [
     "3.38"
   ]
