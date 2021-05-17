@@ -1,0 +1,8 @@
+{
+  "name": "XML-Fix",
+  "description": "Fixes the XML-Codes displaying instead of the characters on notifications.",
+  "uuid": "xmlfix@pwall.github.com",
+  "shell-version": [
+    "3.38"
+  ]
+}
