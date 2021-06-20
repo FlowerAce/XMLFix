@@ -51,7 +51,7 @@ const newNotifyAsync = function (params, invocation) {
 
 	for (let i = 0; i < xmlEntities.length; i++) {
 		const [number, character] = xmlEntities[i];
-		body = body.replace(`&#${number};`, character);
+		body = body.replaceAll(`&#${number};`, character);
 	}
 
 	if (!hints["image-path"] && hints["image_path"])
