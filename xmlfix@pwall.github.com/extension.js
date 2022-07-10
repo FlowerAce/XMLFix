@@ -2,7 +2,7 @@ const { GLib } = imports.gi;
 const NotificationDaemon = imports.ui.notificationDaemon;
 const Params = imports.misc.params;
 
-const { NotificationClosedReason, Urgency, rewriteRules } = NotificationDaemon;
+const { NotificationClosedReason, Urgency } = NotificationDaemon;
 
 const prototype = NotificationDaemon.FdoNotificationDaemon.prototype;
 
@@ -38,15 +38,6 @@ const newNotifyAsync = function (params, invocation) {
 			"[gnome-shell] this._emitNotificationClosed"
 		);
 		return invocation.return_value(GLib.Variant.new("(u)", [id]));
-	}
-
-	let rewrites = rewriteRules[appName];
-	if (rewrites) {
-		for (let i = 0; i < rewrites.length; i++) {
-			let rule = rewrites[i];
-			if (summary.search(rule.pattern) != -1)
-				summary = summary.replace(rule.pattern, rule.replacement);
-		}
 	}
 
 	for (let i = 0; i < xmlEntities.length; i++) {
