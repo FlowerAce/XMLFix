@@ -1,4 +1,4 @@
-# Window Buttons Extension
+# XMLFix
 
 This is an extension for Gnome 3.38 (should work for GNOME 40 too) that fixes a bug in some apps not sending the proper characters and just sending the xml escape sequence on notifactions. (For example transforming &amp;#39; into ')
 
